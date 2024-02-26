@@ -1,0 +1,437 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	background-image: url("images/car1.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: 90% 20%;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	color: #3d4849;
+}
+
+/*Formatting the top navigation of the page via navtop class */
+.navtop {
+	overflow: hidden;
+	background-color: black;
+	width: 100%;
+	height: 10%;
+	clear: both;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+/* Style only text in navigation bar with following properties */
+.navtop a:not(#logo):not(#search){
+	float: left;
+	font-size: 22px;
+	font-weight: bold;
+	padding: 60px 0px;
+	text-decoration: none;
+	color: white;
+	width: 12%;
+	text-align: center;
+	height: 100%;
+	bottom: 0;
+	position: relative;
+	z-index: 11;
+}
+
+
+/* highlight only text navigation links when hovered on */
+.navtop a:hover:not(#logo):not(#search) {
+	background-color: #d2d2d1;
+	color: black;
+}
+
+#logo{
+	width: 200px;
+	height: auto;
+	float: left;
+	padding: 24px 3% 0% 3%;
+	position: relative;
+	z-index: 11;
+}
+
+/* Set background and formatting rules for main container seen on most pages */
+div.main-content {
+	margin-left: 5%;
+	margin-right: auto;
+	padding: 3%;
+	width: 64%;
+	background-color: white;
+	float:left;
+	height: 100%;
+	min-height: 100%;
+}
+
+div.main-content img {
+	width: auto;
+	display: block;
+	padding: 0;
+	margin: 0;
+	float: right;
+	right:0;
+	clear: both;
+}
+
+div.main-content figure {
+	text-align: center;
+}
+
+.sidenav {
+	padding: 0%;
+	right: 0;
+	top: 0;
+	width: 25%;
+	background-color: #d2d2d1;
+	height: 100%;
+	position: fixed;
+	z-index: -1; /* Appear underneath the top navigation when overlapping */
+}
+
+.sidenav a, .sidenav h1 {
+	color: #3d4849;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.5em;
+	display: block;
+	padding: 10% 15%;
+	z-index: 2;
+}
+
+.sidenav h1 {
+	font-size: 2.5em;
+	line-height: 60%;
+}
+
+.sidebar a:hover {
+	color: #d2d2d1;
+	background-color: white;
+	z-index: 2;
+}
+
+/*Formatting footers to always stay at the bottom of every page */
+footer {
+	width: 100%;
+	background-color: black;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	color: white;
+	text-align: center;
+	font-size: 70%;
+	padding: 0.4% 0;
+	position: fixed;
+    bottom: 0;
+}
+
+/*Format promotional text and button in home page over car images */
+.promo {
+	color: white;
+	position: relative;
+	text-align: center;
+	line-height: 25%;
+	background-color: rgba(0,0,0,0.4);
+	width: 98%;
+	padding: 1%;
+}
+
+.promo h1 {
+	font: bold 4vw 'Century Gothic', sans-serif; /* Header set using short-hand font property */
+}
+
+.promo p {
+	font-size: 2.5vw;
+}
+
+.promo a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.5vw;
+	font-weight: normal;
+}
+
+.promo a:hover {
+	text-decoration: none;
+	color: white;
+	font-size: 1.5vw;
+}
+
+header {
+	font-size: 3.5em;
+	font-weight: bold;
+}
+
+button {
+	background-color: white;
+	padding: 20px 30px;
+	min-width: 200px;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; 
+	border: solid gray;
+	border-width: thin;
+	font-size: 1em;
+	text-decoration: none;
+	width: 49%;
+	height: 120px;
+	margin: 0.15%;
+}
+	
+button:hover {
+	background-color: #d2d2d1;
+}
+
+.main-content h1 {
+	font: bold 3vw 'Century Gothic', sans-serif; /* Short hand font property */
+	line-height: 20%;
+}
+
+.main-content h2 {
+	font: bold 2vw 'Century Gothic', sans-serif;
+}
+
+.main-content h3 {
+	font: bold 1.4em 'Century Gothic', sans-serif;
+}
+
+.main-content p, ul, ol {
+	font-size: 1.1em;
+}
+
+/* Styling for image of me in about page */
+#me {
+	border: double black;
+	padding: 20px;
+	width: auto;
+	text-align: center;
+	float: right;
+}
+
+figure {
+	float: right;
+}
+
+table {
+	border-collapse: collapse;
+	table-layout: auto;
+	width: 100%;
+	height: 100%;
+	empty-cells: hide;
+}
+
+/* Set only rows to have borders */
+table tr:not(.no-border) { 
+	background-color: #f1f1f1;
+	padding: .4% 0;
+}
+
+table th {
+	background-color: #d2d2d1;
+	padding: .9% 0;
+	text-align: center;
+	width: 3%;
+	border: solid white;
+}
+
+table td {
+	text-align: center;
+}
+
+/* Single instance use under the product page, helps emphasise important information */
+#warning {
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* Format cell colours for each unit on table */
+.COS10003 {
+	background-color: #00cccc;
+}
+
+.COS10009 {
+	background-color: #ccccff;
+}
+
+.COS10011 {
+	background-color: #ff99cc;
+}
+
+.TNE10005 {
+	background-color: #cccc99;
+}
+
+/* Enquiry form formatting */
+label{
+	display: block;
+	margin: 50px 2.8%;
+}
+
+.inline {
+	display: inline;
+	padding: 5%;
+}
+
+legend {
+	font-size: 1.5em;
+	display:inline-block;
+	margin: 1% .6%;
+}
+
+input {
+	margin: 0 .6%;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	display: inline;
+	
+}
+
+select {
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	min-height: 23px;
+	margin: 0 .6%;
+}
+
+textarea {
+	margin: 0 .6%;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	width: 98.6%;
+	
+	resize: none;
+}
+
+/* Format definition lists such that definitions are inline with the definition term */
+dl {
+	width: 50%;
+	overflow: hidden;
+}
+
+dt, dd {
+	float: left;
+	width: 50%;
+	padding: 0;
+	margin: 0;
+}
+
+#cancel-order {
+	margin: 10px 0;
+	width: 100%;
+	
+}
+
+/* Full menu screen formatting (for JS enhancement 1)*/
+#full-menu {
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.95);
+	width: 100%;
+	height:100%;
+	clear: both;
+	position: fixed;
+	padding: 30px;
+	overflow-x: hidden;
+	z-index: 10; /* In front of everything except top nav */
+	display: none; /* Do not show by default */
+	top: 0;
+}
+
+#full-menu a {
+	font-weight: bold;
+	text-decoration: none;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size: 50px;
+	color: white;
+	display:block;
+	text-align: center;
+	overflow-x: hidden;
+	position: relative;
+	z-index: 10;
+	clear: both;
+	top: 30%;
+}
+
+
+#full-menu a:hover {
+	color: #d2d2d1;
+}
+
+/* Search bar formatting for JS enhancement 2 */
+#search_icon {
+	padding: 63px 1% 0% 3%;
+	width: 25px; 
+	height: 25px;
+}
+
+#search_bar {
+	width: 15%; 
+	height: 30px;
+	float: center;
+	padding: 0;
+	margin: 0;
+	outline: black;
+	background-color: black;
+	color: white;
+	font-size: 25px;
+	border: 0.5px solid;
+	border-color: black;
+}
+
+/* CSS enhancement 1 - Format top nav to flow downwards, use full width of page for main content, and remove side navigation on narrow viewports (i.e. a phone display) */
+@media screen and (max-width: 900px) {
+	.navtop a:not(#logo) {
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding: 8% 0%;
+	}
+	#logo {
+		margin-left: 20%;
+		display: block;
+		width: 60%;
+		padding: 20px 20% 0 0;
+	}
+	body {
+		background-size: contain;
+		background-position-y: bottom; /*Move background image downwards to account for the taller navigation */		
+	}
+	.sidenav {
+		display:none; /*Remove side navigation */
+	}
+	div.main-content {
+		width: 94%;
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		float: none;
+		overflow-x: hidden; /*Disable horizonatal scrolling */
+	}
+	div.main-content p, img, h1, h2, h3 {
+		display: inline-block;
+		clear: both;
+	}
+	.promo {
+		width: 100%;
+	}
+	body {
+		background-position: 90% 150%;
+	}
+	table td, th {
+		font-size: 70%;
+	}
+	#full-menu a {
+		top: 530px;
+		font-size: 2.5em;
+		position:relative;
+	}
+	#search {
+		display: block;
+		width: 100%;
+		position: fixed;
+	}
+}
+
+/* CSS enhancement 2 - Driving logo animation (played when the logo is hovered on by the cursor) */
+#logo:hover {animation-name: drive-off; animation-duration: 2s;}
+
+@keyframes drive-off {
+	20% {transform: rotate(4deg); transform: skew(-7deg);}
+	30% {transform: rotate(6deg);}
+	60% {transform: rotate(10deg);}
+	90% {transform: rotate(2deg);}
+	100% {transform: rotate(-0.5deg);}
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- List of things added to the website (aside from bare minimum requirements) -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" >
+		<meta name="description" content="Enhancements used on site">
+		<meta name="keywords" content="enhancements, analysis">
+		<meta name="author" content="Duncan Elliot">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Epicars - Enhancements</title>
+		<link href="best.css" rel="stylesheet">
+		<script src="best.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<!-- Top navigation inside nav tags -->
+		<nav class="navtop">
+			<a id="logo" href="index.html"><img src="images/logo.svg" alt="Epicars logo"></a>
+			<a href="index.html">HOME</a>
+			<a href="product.html">CARS</a>
+			<a href="enquire.html">ENQUIRE</a>
+			<a id="menu-button">ABOUT &#9776;</a>
+			<form id="search" action="search.html">
+				<input type="image" id="search_icon" src="images/search-icon.svg" alt="Search bar icon">
+				<input id="search_bar" type="text" placeholder="Search site...">
+			</form>
+		</nav>
+		<!-- Full menu overlay -->
+		<div id="full-menu">
+			<a href="about.html">About the website</a>
+			<a href="enhancements.html">CSS enhancements</a>
+			<a href="enhancements2.html">JavaScript enhancements</a>
+		</div>
+		<!-- Container for the page contents (apart from the side navigation) -->
+		<div class="main-content">
+			<header>Website CSS enhancements</header>
+			<section>
+				<h2 id="enhancement1">Enhancement 1 - Re-formatting for narrow/mobile viewports</h2>
+				<h3>Description</h3>
+				<p>When the viewport width of the webpage is under/is shrunken to under 900px, the page's content is transformed appropriately to better adapt to the narrow environment, such as on a mobile phone. This involves the removal of the side navigation, stretching the main content across the entire width of the device, which enables maximum readability of the page's content. Furthermore, the top navigation flows downwards, allowing enough width for each button such that the navigation buttons are still readable and usable, which would not be possible if maintaining the regular horizontal layout.</p>
+				<h3>How it goes above basic requirements</h3>
+				<p>The CSS technique used to implement this enhancement was not covered in any of the lectures or labs so far in this unit. In addition, it is not listed as a requirement for the assignment, but rather extends from the basic requirement of a responsive webpage layout, effectively re-designing portions of the page on demand to suit a client's mobile viewport.</p>
+				<h3>CSS used for enhancement</h3>
+				<p>In order override the CSS from the style.css file at the appropriate time, the browser content is targeted via @media screen and the condition for whether the max width is 900px is tested. When this condition is met (i.e. the viewport width drops below 900px), the CSS selectors embedded underneath are executed, which override many of the styles seen in the style.css file, and re-format the webpage.</p>
+				<h3>Source</h3>
+				<p><a href="https://www.w3schools.com/html/html_responsive.asp">W3Schools responsive viewport CSS tutorial</a></p>
+				<p><a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp">W3Schools media-query CSS tutorial</a></p>
+				<hr>
+			</section>
+			<section>
+				<h2 id="enhancement2">Enhancement 2 - Logo animation on cursor hover</h2>
+				<h3>Description</h3>
+				<p>Whenever the user hovers on the logo featured in the top left of all webpages on the site, an animation is played, which gives the impression the car is driving off. Not only does this boost the interactivity the client has with the webpage, making it more exciting to the user, but also introduces brand personality, with the hyperbolic movements of the car leaving the user to infer a friendly and jovial brand.</p>
+				<h3>How it goes above basic requirements</h3>
+				<p>While in a lecture the implementation of CSS animation was mentioned, the actual code behind this enhancement needed to be researched, hence again going above the material taught thus far. Additionally, the assignment did not require the use of animations, but I chose to use them to improve the cosmetics of the site, as well as making navigating the site a more engaging experience for the user.</p>
+				<h3>CSS used for enhancement</h3>
+				<p>First the animation needed to be defined. This is done through the @keyframes keyword, which defines the transformations undertaken on each frame, as well as the when the frames occur in relation to the duration of the animation. In order to target the object (in this case the logo image), the attribute "animation-name" is utilized underneath the image selector, which links the animation to this object. Lastly, the attribute "animation-duration" was used to specify the duration of the entire animation, such that it lasts long enough to be noticeable (in this case 3 seconds).</p>
+				<h3>Source</h3>
+				<p><a href="https://www.w3schools.com/css/css3_animations.asp">W3Schools animation CSS tutorial</a></p>
+			</section>
+		</div>
+		<!-- Side navigation for page content -->
+		<aside class="sidenav">
+			<a href="#logo">Go to top</a>
+			<h1>Navigation</h1>
+			<a href="#enhancement1">Enhancement 1</a>
+			<a href="#enhancement2">Enhancement 2</a>
+		</aside>
+		<!-- Footer that contains disclaimer and other content-->
+		<footer>&#169; Epicars. Always drive responsibly.</footer>
+	</body>
+</html>
