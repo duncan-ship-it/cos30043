@@ -30,8 +30,8 @@ const Unit = {
         return { units }
     },
     template: `<div>
-								<h4>Unit code: {{filterUnits.code}}</h4>
-								<p>{{filterUnits.code}}</p>
+                <h4>Unit code: {{filterUnits.code}}</h4>
+                <p>{{filterUnits.code}}</p>
                 <p>{{filterUnits.desc}}</p>
                 <p>{{filterUnits.cp}}</p>
                 <p>{{filterUnits.type}}</p>
@@ -59,24 +59,24 @@ app.component('unit-lookup', {
         return { units }
     },
     template: `<h1>Unit Information System</h1>
-							<div class="table-responsive">
-									<table class="table table-striped table-hover">
-											<thead>
-													<tr>
-															<th scope="col" id="codeHeading">Code</th>
-															<th scope="col" id="descHeading">Description</th>
-															<th scope="col" id="detailsHeading">More Details</th>
-													</tr>
-											</thead>
-											<tbody>
-													<tr v-for="u in units">
-															<td headers="codeHeading">{{u.code}}</td>
-															<td headers="descHeading">{{u.desc}}</td>
-															<td headers="detailsHeading"><router-link :to="'/unit/' + u.code">Show details</router-link></td>
-													</tr>
-											</tbody>
-									</table>
-							</div>`
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col" id="codeHeading">Code</th>
+                                <th scope="col" id="descHeading">Description</th>
+                                <th scope="col" id="detailsHeading">More Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="u in units">
+                                <td headers="codeHeading">{{u.code}}</td>
+                                <td headers="descHeading">{{u.desc}}</td>
+                                <td headers="detailsHeading"><router-link :to="'/unit/' + u.code">Show details</router-link></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>`
 });
 
 app.use(router);

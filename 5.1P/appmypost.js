@@ -1,23 +1,33 @@
-const app = Vue.createApp({
-    data() {
+const app = Vue.createApp({ });
+
+app.component('app-mypost', // indicating the component tag
+{
+    // defining data to be used in the component
+    data: function() {
         return {
-            postContents: '',
-            posts: []
+            statPosts:[],
+            strStatus:''
         }
     },
-    methods: {
-        post: function() {
-            this.posts.push({'id': this.posts.length, 'content': this.postContents});
+    // define the template for the component
+    template: `<form @submit.prevent="add(strStatus)">
+                    <label for="postContents">Status</label>
+                    <input type="text" name="postContents" id="postContents" v-model="strStatus"><br>
+                    <button type="submit">Post</button>
+                    <div v-for="(p, i) in statPosts">
+                        <span>{{ p }}</span><button v-on:click="remove(i)" type="button">Delete</button>
+                    </div>
+                </form>`,
+    // defining the methods for add and remove status messages
+    methods:{
+        add:function(status){
+            this.statPosts.push(status);
+            this.strStatus = '';
         },
-        deletePost: function(index) {
-            this.posts.splice(id, 1);
+        remove:function(index){
+            this.statPosts.splice(index, 1);
         }
     }
-});
-
-app.component('post', {
-    props: ['index', 'content'],
-    template: '<span>{{ content }}</span><button v-on:click="deletePost(1)" type="button">Delete</button>'
 });
 
 app.mount('#app');
