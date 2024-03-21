@@ -11,7 +11,7 @@
 		<h1>Number Guessing Game</h1>
         <form @submit.prevent="checkGuess()">
             <label for="guess">Enter your guess from 1 to 100: </label>
-            <input type="number" name="guess" id="guess" v-model="guess" min="1" max="100"><br>
+            <input type="number" name="guess" id="guess" v-model="guess" min="1" max="100" required><br>
             <button type="submit">Check Guess</button>
             <button type="button" v-on:click="reveal()">Give Up</button>
             <button type="reset" v-on:click="init()">Start Over</button><br>
