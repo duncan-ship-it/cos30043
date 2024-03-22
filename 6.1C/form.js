@@ -41,7 +41,8 @@ const app = Vue.createApp({
         ],
         mobileRules: [
             v => !!v || 'Mobile is required',
-            v => v && /^04/.test(v) || 'Mobile must start with digits 04'
+            v => v && /^04/.test(v) || 'Mobile must start with digits 04',
+            v => v && v.length >= 10 || 'Mobile must be at least 10 digits'
         ],
         termsVisible: false
     }),
